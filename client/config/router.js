@@ -1,7 +1,18 @@
 
 FlowRouter.route('/', {
     action: function() {
-        FlowRouter.go('/dashboard1');
+        FlowRouter.go('/dashboard');
+    }
+});
+
+FlowRouter.route('/dashboard', {
+    action: function() {
+        BlazeLayout.render("projectcogMainLayout", {content: "dashboard"});
+    }
+});
+FlowRouter.route('/projectcogChatView', {
+    action: function() {
+        BlazeLayout.render("projectcogMainLayout", {content: "projectcogChatView"});
     }
 });
 
