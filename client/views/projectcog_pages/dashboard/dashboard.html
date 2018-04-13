@@ -4,86 +4,14 @@
         <div class="col-sm-3">
             <h2>Welcome Amelia</h2>
             <small>You have 42 messages and 6 notifications.</small>
-            {{> notificationList notifications}}
         </div>
-        <div class="col-sm-6">
-            <div class="flot-chart dashboard-chart">
-                <div class="flot-chart-content" id="flot-dashboard-chart"></div>
-            </div>
-            <div class="row text-left">
-                <div class="col-xs-4">
-                    <div class=" m-l-md">
-                        <span class="h4 font-bold m-t block">$ 406,100</span>
-                        <small class="text-muted m-b block">Sales marketing report</small>
-                    </div>
-                </div>
-                <div class="col-xs-4">
-                    <span class="h4 font-bold m-t block">$ 150,401</span>
-                    <small class="text-muted m-b block">Annual sales revenue</small>
-                </div>
-                <div class="col-xs-4">
-                    <span class="h4 font-bold m-t block">$ 16,822</span>
-                    <small class="text-muted m-b block">Half-year revenue margin</small>
-                </div>
-
-            </div>
-        </div>
-        <div class="col-sm-3">
-            <div class="statistic-box">
-                <h4>
-                    Project Beta progress
-                </h4>
-
-                <p>
-                    You have two project with not compleated task.
-                </p>
-
-                <div class="row text-center">
-                    <div class="col-lg-6">
-                        <canvas id="doughnutChart2" width="80" height="80" style="margin: 18px auto 0"></canvas>
-                        <h5 >Kolter</h5>
-                    </div>
-                    <div class="col-lg-6">
-                        <canvas id="doughnutChart" width="80" height="80" style="margin: 18px auto 0"></canvas>
-                        <h5 >Maxtor</h5>
-                    </div>
-                </div>
-                <div class="m-t">
-                    <small>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</small>
-                </div>
-
-            </div>
-        </div>
-
     </div>
     <div class="wrapper wrapper-content">
         <div class="row">
             <div class="col-lg-4">
                 <div class="ibox float-e-margins">
                     <div class="ibox-title">
-                        <h5>New data for the report</h5> <span class="label label-primary">IN+</span>
-                        {{>iboxTools}}
-                    </div>
-                    <div class="ibox-content">
-                        <div>
-
-                            <div class="pull-right text-right">
-
-                                <span class="bar_dashboard">5,3,9,6,5,9,7,3,5,2,4,7,3,2,7,9,6,4,5,7,3,2,1,0,9,5,6,8,3,2,1</span>
-                                <br/>
-                                <small class="font-bold">$ 20 054.43</small>
-                            </div>
-                            <h4>NYS report new data!
-                                <br/>
-                                <small class="m-r"><a href="/graphFlot"> Check the stock price! </a> </small>
-                            </h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="ibox float-e-margins">
-                    <div class="ibox-title">
                         <h5>Read below comments</h5>
-                        {{>iboxTools}}
                     </div>
                     <div class="ibox-content no-padding">
                         <ul class="list-group">
@@ -222,137 +150,52 @@
 
             </div>
             <div class="col-lg-4">
-                <div class="ibox float-e-margins">
+                <div class="ibox" id="ibox1">
                     <div class="ibox-title">
-                        <h5>Alpha project</h5>
-                        {{>iboxTools}}
+                        <h5>To Do Lists</h5>
                     </div>
-                    <div class="ibox-content ibox-heading">
-                        <h3>You have meeting today!</h3>
-                        <small><i class="fa fa-map-marker"></i> Meeting is on 6:00am. Check your schedule to see detail.</small>
-                    </div>
-                    <div class="ibox-content inspinia-timeline">
-
-                        <div class="timeline-item">
-                            <div class="row">
-                                <div class="col-xs-3 date">
-                                    <i class="fa fa-briefcase"></i>
-                                    6:00 am
-                                    <br/>
-                                    <small class="text-navy">2 hour ago</small>
-                                </div>
-                                <div class="col-xs-7 content no-top-border">
-                                    <p class="m-b-xs"><strong>Meeting</strong></p>
-
-                                    <p>Conference on the sales results for the previous year. Monica please examine sales trends in marketing and products. Below please find the current status of the
-                                        sale.</p>
-
-                                    <p><span data-diameter="40" class="updating-chart">5,3,9,6,5,9,7,3,5,2,5,3,9,6,5,9,4,7,3,2,9,8,7,4,5,1,2,9,5,4,7,2,7,7,3,5,2</span></p>
-                                </div>
-                            </div>
+                    <div class="ibox-content">
+                        <div class="sk-spinner sk-spinner-double-bounce">
+                            <div class="sk-double-bounce1"></div>
+                            <div class="sk-double-bounce2"></div>
                         </div>
-                        <div class="timeline-item">
-                            <div class="row">
-                                <div class="col-xs-3 date">
-                                    <i class="fa fa-file-text"></i>
-                                    7:00 am
-                                    <br/>
-                                    <small class="text-navy">3 hour ago</small>
+                        <ul class="sortable-list connectList agile-list ui-sortable" id="todo">
+                            <li class="warning-element" id="task1">
+                                Simply dummy text of the printing and typesetting industry.
+                                <div class="agile-detail">
+                                    <a href="#" class="pull-right btn btn-xs btn-white">Tag</a>
+                                    <i class="fa fa-clock-o"></i> 12.10.2015
                                 </div>
-                                <div class="col-xs-7 content">
-                                    <p class="m-b-xs"><strong>Send documents to Mike</strong></p>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since.</p>
+                            </li>
+                            <li class="success-element" id="task2">
+                                Many desktop publishing packages and web page editors now use Lorem Ipsum as their default.
+                                <div class="agile-detail">
+                                    <a href="#" class="pull-right btn btn-xs btn-white">Mark</a>
+                                    <i class="fa fa-clock-o"></i> 05.04.2015
                                 </div>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="row">
-                                <div class="col-xs-3 date">
-                                    <i class="fa fa-coffee"></i>
-                                    8:00 am
-                                    <br/>
+                            </li>
+                            <li class="info-element" id="task3">
+                                Sometimes by accident, sometimes on purpose (injected humour and the like).
+                                <div class="agile-detail">
+                                    <a href="#" class="pull-right btn btn-xs btn-white">Mark</a>
+                                    <i class="fa fa-clock-o"></i> 16.11.2015
                                 </div>
-                                <div class="col-xs-7 content">
-                                    <p class="m-b-xs"><strong>Coffee Break</strong></p>
-                                    <p>
-                                        Go to shop and find some products.
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.
-                                    </p>
+                            </li>
+                            <li class="danger-element" id="task4">
+                                All the Lorem Ipsum generators
+                                <div class="agile-detail">
+                                    <a href="#" class="pull-right btn btn-xs btn-primary">Done</a>
+                                    <i class="fa fa-clock-o"></i> 06.10.2015
                                 </div>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="row">
-                                <div class="col-xs-3 date">
-                                    <i class="fa fa-phone"></i>
-                                    11:00 am
-                                    <br/>
-                                    <small class="text-navy">21 hour ago</small>
-                                </div>
-                                <div class="col-xs-7 content">
-                                    <p class="m-b-xs"><strong>Phone with Jeronimo</strong></p>
-                                    <p>
-                                        Lorem Ipsum has been the industry's standard dummy text ever since.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="row">
-                                <div class="col-xs-3 date">
-                                    <i class="fa fa-user-md"></i>
-                                    09:00 pm
-                                    <br/>
-                                    <small>21 hour ago</small>
-                                </div>
-                                <div class="col-xs-7 content">
-                                    <p class="m-b-xs"><strong>Go to the doctor dr Smith</strong></p>
-                                    <p>
-                                        Find some issue and go to doctor.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="row">
-                                <div class="col-xs-3 date">
-                                    <i class="fa fa-comments"></i>
-                                    12:50 pm
-                                    <br/>
-                                    <small class="text-navy">48 hour ago</small>
-                                </div>
-                                <div class="col-xs-7 content">
-                                    <p class="m-b-xs"><strong>Chat with Monica and Sandra</strong></p>
-                                    <p>
-                                        Web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+                            </li>
+                        </ul>
 
                     </div>
                 </div>
             </div>
-
+            
         </div>
     </div>
     <!-- Chat Box -->
     {{> projectcogChatMiniView}}
-</template>
-
-<template name="notificationList">
-    <ul class="list-group clear-list m-t">
-        {{#each this}}
-            {{>notificationElement}}
-        {{/each}}
-    </ul>
-</template>
-
-<template name="notificationElement">
-    <li class="list-group-item">
-        <span class="pull-right">
-            {{time}}
-        </span>
-        <span class="label label-{{labelClass}}">{{number}}</span> {{content}}
-    </li>
 </template>

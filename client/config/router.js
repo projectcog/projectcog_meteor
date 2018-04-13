@@ -1,13 +1,21 @@
-
 FlowRouter.route('/', {
     action: function() {
         FlowRouter.go('/dashboard');
     }
 });
-
 FlowRouter.route('/dashboard', {
     action: function() {
         BlazeLayout.render("projectcogMainLayout", {content: "dashboard"});
+    }
+});
+FlowRouter.route('/cogProjects', {
+    action: function() {
+        BlazeLayout.render("projectcogMainLayout", {content: "cogProjects"});
+    }
+});
+FlowRouter.route('/cogfiles', {
+    action: function() {
+        BlazeLayout.render("projectcogMainLayout", {content: "cogfiles"});
     }
 });
 FlowRouter.route('/projectcogChatView', {
